@@ -1,0 +1,65 @@
+/* Estilo do cabeçalho (Header) */
+.header {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);  /* Aplica um gradiente de cor azul para o cabeçalho */
+    padding: 1rem;  /* Adiciona preenchimento interno de 1rem para o cabeçalho */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Aplica uma sombra suave para dar um efeito de profundidade */
+}
+
+/* Estilo do cartão de curso */
+.course-card {
+    border-radius: 8px;  /* Bordas arredondadas no cartão */
+    background: white;  /* Cor de fundo branca para o cartão */
+    transition: transform 0.2s;  /* Efeito de transição para a transformação do cartão */
+}
+
+/* Efeito de hover no cartão de curso */
+.course-card:hover {
+    transform: translateY(-4px);  /* Ao passar o mouse sobre o cartão, ele se move para cima */
+}
+
+/* Estilo da imagem de capa do curso */
+.course-cover-image img {
+    transition: transform 0.3s ease;  /* Transição suave para o efeito de transformação na imagem */
+}
+
+/* Efeito de hover na imagem de capa do curso */
+.course-card:hover .course-cover-image img {
+    transform: scale(1.05);  /* Ao passar o mouse sobre o cartão, a imagem se expande ligeiramente */
+}
+
+/* Estilo da área da imagem de capa do curso */
+.course-cover-image {
+    overflow: hidden;  /* Garante que qualquer parte da imagem que ultrapasse os limites seja escondida */
+    border-radius: 0.5rem;  /* Bordas arredondadas na área da imagem */
+}
+
+/* Estilo do badge de nível */
+.level-badge {
+    border-radius: 9999px;  /* Torna o badge completamente arredondado */
+    padding: 0.5rem 1rem;  /* Adiciona preenchimento interno ao badge */
+    font-weight: 600;  /* Deixa o texto do badge em negrito */
+}
+
+/* Estilo da barra de progresso */
+.progress-bar {
+    height: 8px;  /* Define a altura da barra de progresso */
+    border-radius: 4px;  /* Bordas arredondadas na barra de progresso */
+    background: #e5e7eb;  /* Cor de fundo cinza claro para a barra de progresso */
+    overflow: hidden;  /* Garante que o conteúdo da barra de progresso não ultrapasse seus limites */
+}
+
+/* Estilo do preenchimento da barra de progresso */
+.progress-bar-fill {
+    height: 100%;  /* O preenchimento ocupa toda a altura da barra */
+    transition: width 0.3s ease;  /* Transição suave ao alterar a largura do preenchimento */
+}
+
+/* Estilo da imagem de avatar do usuário */
+img[data-name="user-avatar"] {
+    transition: transform 0.2s;  /* Transição suave para a transformação do avatar */
+}
+
+/* Efeito de hover no avatar do usuário */
+img[data-name="user-avatar"]:hover {
+    transform: scale(1.1);  /* Ao passar o mouse sobre o avatar, ele se amplia ligeiramente */
+}

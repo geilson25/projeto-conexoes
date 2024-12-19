@@ -1,0 +1,111 @@
+/* Estilo global de fontes e margens para garantir uma aparência consistente em todo o site */
+* {
+    box-sizing: border-box;  /* Garante que o padding e o border não afetem as dimensões do elemento */
+    margin: 0;  /* Remove margens padrão de todos os elementos */
+    padding: 0;  /* Remove preenchimentos padrão de todos os elementos */
+}
+
+body {
+    font-family: 'Inter', sans-serif;  /* Define a fonte padrão para o corpo do texto */
+    background-color: #f8fafc;  /* Cor de fundo muito suave para o corpo da página */
+    color: #333;  /* Cor padrão do texto */
+    line-height: 1.6;  /* Define a altura da linha para melhorar a legibilidade */
+}
+
+/* Estilo para a classe .container, garantindo que o conteúdo esteja centralizado e com boa largura em dispositivos grandes */
+.container {
+    width: 90%;  /* Define a largura como 90% da tela */
+    max-width: 1200px;  /* Define a largura máxima para telas muito grandes */
+    margin: 0 auto;  /* Centraliza o conteúdo horizontalmente */
+    padding: 2rem 0;  /* Define um espaço interno superior e inferior */
+}
+
+/* Estilo para o cabeçalho da página */
+.header {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);  /* Gradiente de azul para o cabeçalho */
+    padding: 1rem;  /* Adiciona preenchimento ao redor do conteúdo do cabeçalho */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar profundidade ao cabeçalho */
+}
+
+/* Definindo os estilos do título do cabeçalho */
+.header h1 {
+    font-size: 2rem;  /* Define o tamanho da fonte */
+    color: white;  /* Cor do texto */
+    font-weight: bold;  /* Deixa o texto em negrito */
+}
+
+/* Estilo para os cartões de curso */
+.course-card {
+    background-color: white;  /* Define a cor de fundo do cartão como branco */
+    border-radius: 8px;  /* Bordas arredondadas nos cantos do cartão */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Sombra leve para o cartão */
+    overflow: hidden;  /* Garante que o conteúdo que ultrapassar os limites do cartão seja escondido */
+    transition: transform 0.3s ease;  /* Transição suave ao aplicar a transformação (movimento) */
+}
+
+/* Efeito de hover para os cartões de curso, criando um "levitar" quando o usuário passar o mouse */
+.course-card:hover {
+    transform: translateY(-5px);  /* Move o cartão para cima quando o mouse passar sobre ele */
+}
+
+/* Estilo para a imagem de capa do curso */
+.course-cover-image img {
+    width: 100%;  /* A imagem ocupa toda a largura do elemento pai */
+    height: auto;  /* A altura da imagem é ajustada automaticamente para manter a proporção */
+    border-radius: 8px;  /* Borda arredondada na imagem */
+    object-fit: cover;  /* Faz a imagem cobrir completamente o espaço, mantendo a proporção */
+}
+
+/* Estilo para a barra de progresso */
+.progress-bar {
+    width: 100%;  /* A barra de progresso ocupa toda a largura do elemento pai */
+    height: 8px;  /* Altura da barra de progresso */
+    background-color: #e5e7eb;  /* Cor de fundo da barra de progresso (cinza claro) */
+    border-radius: 4px;  /* Borda arredondada na barra de progresso */
+    overflow: hidden;  /* Garante que a barra de progresso não ultrapasse os limites do contêiner */
+}
+
+/* Estilo para o preenchimento da barra de progresso (representa o progresso do curso) */
+.progress-bar-fill {
+    height: 100%;  /* A altura do preenchimento é 100% da altura da barra de progresso */
+    background-color: #38bdf8;  /* Cor de preenchimento (azul) */
+    transition: width 0.3s ease;  /* Transição suave na largura do preenchimento */
+}
+
+/* Estilo para os badges de nível */
+.level-badge {
+    background-color: #f0f9ff;  /* Cor de fundo suave para o badge */
+    color: #1e40af;  /* Cor do texto do badge */
+    padding: 8px 16px;  /* Adiciona preenchimento ao redor do conteúdo do badge */
+    border-radius: 9999px;  /* Faz com que o badge tenha bordas arredondadas */
+    font-weight: 600;  /* Deixa o texto do badge em negrito */
+}
+
+/* Estilo para o botão "Começar/Continuar" */
+button {
+    background-color: #3b82f6;  /* Cor de fundo azul para o botão */
+    color: white;  /* Cor do texto do botão */
+    padding: 8px 16px;  /* Preenchimento interno do botão */
+    border: none;  /* Remove a borda padrão */
+    border-radius: 8px;  /* Bordas arredondadas no botão */
+    cursor: pointer;  /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease;  /* Transição suave na cor de fundo */
+}
+
+/* Efeito de hover para o botão "Começar/Continuar", muda a cor de fundo quando o usuário passa o mouse */
+button:hover {
+    background-color: #2563eb;  /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo para o avatar do usuário */
+img[data-name="user-avatar"] {
+    width: 40px;  /* Tamanho do avatar */
+    height: 40px;  /* Tamanho do avatar */
+    border-radius: 50%;  /* Deixa o avatar redondo */
+    border: 2px solid white;  /* Borda branca em torno do avatar */
+}
+
+/* Efeito de hover para o avatar do usuário, ampliando a imagem quando o mouse passa sobre ela */
+img[data-name="user-avatar"]:hover {
+    transform: scale(1.1);  /* Amplia o avatar quando o mouse passa sobre ele */
+}
