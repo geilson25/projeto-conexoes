@@ -1,6 +1,3 @@
-Aqui está o arquivo `README.md` atualizado com as modificações recentes:
-
-```markdown
 # Projeto Conexões - Front-End
 
 ## Descrição
