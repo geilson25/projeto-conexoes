@@ -1,4 +1,4 @@
-# Projeto Conexões - Front-End
+# Projeto Conexões (Front-End)
 
 ## Descrição
 
