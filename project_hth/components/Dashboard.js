@@ -1,25 +1,26 @@
-// Componente Dashboard para exibir a lista de cursos com seu progresso
+// Função do componente Dashboard, que recebe os cursos e o progresso do usuário como props
 function Dashboard({ courses, userProgress }) {
     try {
+        // Retorna o JSX que representa o conteúdo do painel (Dashboard)
         return (
-            // Contêiner principal do Dashboard
-            <div className="container mx-auto mt-8" data-name="dashboard">
-                {/* Grid para exibir os cursos de forma responsiva */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {/* Mapeia a lista de cursos e renderiza um CourseCard para cada curso */}
+            <div className="container mx-auto mt-8 px-4" data-name="dashboard">
+                {/* Grid para exibir os cursos */}
+                <div className="courses-grid" data-name="courses-grid">
+                    {/* Mapeia a lista de cursos para exibir um cartão para cada um */}
                     {courses.map(course => (
+                        // Componente CourseCard para cada curso, com a chave sendo o ID do curso
                         <CourseCard
-                            key={course.id}  // Chave única para cada curso no mapeamento
-                            course={course}  // Passa as informações do curso
-                            progress={userProgress[course.id] || 0}  // Passa o progresso do usuário (ou 0 caso não tenha progresso)
+                            key={course.id}
+                            course={course}  // Passa os dados do curso para o componente
+                            progress={userProgress[course.id] || 0}  // Passa o progresso do usuário para o curso
                         />
                     ))}
                 </div>
             </div>
         );
     } catch (error) {
-        // Se ocorrer um erro, uma função de reporte de erro é chamada
+        // Caso ocorra um erro, ele é capturado e a função reportError é chamada
         reportError(error);
-        return null;  // Caso ocorra erro, o componente retorna null para evitar que a aplicação quebre
+        return null;  // Retorna null caso ocorra um erro, não renderizando nada
     }
 }

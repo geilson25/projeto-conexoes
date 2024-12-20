@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
+    <!-- Define a codificação de caracteres do documento como UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Define a viewport para garantir que o layout seja adequado em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Training Hub</title>
-    <!-- Importação do React, ReactDOM e Babel para permitir o uso de JSX -->
+    <!-- Título da aplicação -->
+    <title>Healthcare Training Platform</title>
+
+    <!-- Inclusão do React (versão 18) a partir de um CDN -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- Inclusão do ReactDOM a partir de um CDN -->
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Inclusão do Babel standalone para compilar JSX no navegador -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Importação do Tailwind CSS para o design da aplicação -->
+    <!-- Inclusão do TailwindCSS via CDN para estilização da aplicação -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Estilos CSS específicos da aplicação -->
+
+    <!-- Inclusão dos arquivos CSS para os estilos -->
     <link href="styles/main.css" rel="stylesheet">
     <link href="styles/components.css" rel="stylesheet">
+    <link href="styles/profile.css" rel="stylesheet">
 </head>
 <body>
-    <!-- A aplicação React será renderizada aqui -->
+    <!-- Div onde o React irá renderizar a aplicação -->
     <div id="root"></div>
-    <!-- Scripts que importam os componentes React -->
+
+    <!-- Inclusão dos scripts JSX que compõem os componentes da aplicação -->
     <script type="text/babel" src="components/Header.js"></script>
     <script type="text/babel" src="components/Dashboard.js"></script>
     <script type="text/babel" src="components/CourseCard.js"></script>
     <script type="text/babel" src="components/ProgressBar.js"></script>
     <script type="text/babel" src="components/LevelBadge.js"></script>
+    
+    <!-- Componentes relacionados ao perfil do usuário -->
+    <script type="text/babel" src="components/profile/ProfileHeader.js"></script>
+    <script type="text/babel" src="components/profile/ProfileStats.js"></script>
+    <script type="text/babel" src="components/profile/ProfileCourses.js"></script>
+    <script type="text/babel" src="components/profile/Achievements.js"></script>
+
+    <!-- Página do perfil do usuário -->
+    <script type="text/babel" src="pages/Profile.js"></script>
+
+    <!-- Utilitário para obter informações sobre os níveis do usuário -->
     <script type="text/babel" src="utils/levelUtils.js"></script>
+
+    <!-- Script principal da aplicação -->
     <script type="text/babel" src="app.js"></script>
 </body>
 </html>

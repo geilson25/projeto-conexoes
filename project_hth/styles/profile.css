@@ -1,0 +1,158 @@
+/* Página do perfil */
+.profile-page {
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  max-width: 1200px; /* Largura máxima de 1200px */
+  margin: 0 auto; /* Centraliza a página */
+}
+
+/* Cabeçalho do perfil */
+.profile-header {
+  background: white; /* Fundo branco */
+  border-radius: 1rem; /* Bordas arredondadas */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+  margin-bottom: 2rem; /* Espaçamento inferior de 2rem */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Capa do perfil */
+.profile-cover {
+  height: 200px; /* Altura fixa de 200px */
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); /* Gradiente de fundo azul */
+}
+
+/* Informações do perfil */
+.profile-info {
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  display: flex; /* Layout flexível */
+  gap: 2rem; /* Espaçamento entre os itens */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  margin-top: -6rem; /* Move as informações para cima */
+}
+
+/* Avatar do perfil */
+.profile-avatar {
+  width: 240px; /* Largura do avatar */
+  height: 240px; /* Altura do avatar */
+  border-radius: 50%; /* Torna o avatar circular */
+  border: 6px solid white; /* Borda branca ao redor do avatar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do avatar */
+}
+
+/* Distintivo de série (streak) */
+.streak-badge {
+  background: #fef3c7; /* Fundo amarelo claro */
+  color: #92400e; /* Cor do texto em marrom escuro */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  border-radius: 9999px; /* Bordas arredondadas ao extremo */
+  font-weight: 600; /* Texto em negrito */
+}
+
+/* Container de estatísticas */
+.stats-container {
+  background: white; /* Fundo branco */
+  border-radius: 1rem; /* Bordas arredondadas */
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  margin-bottom: 2rem; /* Espaçamento inferior de 2rem */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Grid para exibir as estatísticas */
+.stats-grid {
+  display: grid; /* Layout em grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas adaptáveis */
+  gap: 1rem; /* Espaçamento entre os itens */
+  margin-bottom: 2rem; /* Espaçamento inferior de 2rem */
+}
+
+/* Cartão de estatísticas */
+.stat-card {
+  padding: 1.5rem; /* Espaçamento interno de 1.5rem */
+  background: #f3f4f6; /* Fundo cinza claro */
+  border-radius: 0.5rem; /* Bordas levemente arredondadas */
+  text-align: center; /* Texto centralizado */
+}
+
+/* Valor da estatística */
+.stat-value {
+  font-size: 2rem; /* Tamanho da fonte de 2rem */
+  font-weight: bold; /* Texto em negrito */
+  color: #1e40af; /* Cor do texto azul */
+}
+
+/* Progresso do nível */
+.level-progress {
+  padding-top: 1rem; /* Espaçamento superior de 1rem */
+  border-top: 1px solid #e5e7eb; /* Borda superior */
+}
+
+/* Título de seção */
+.section-title {
+  font-size: 1.5rem; /* Tamanho da fonte de 1.5rem */
+  font-weight: bold; /* Texto em negrito */
+  margin-bottom: 1rem; /* Espaçamento inferior de 1rem */
+}
+
+/* Seção de conquistas */
+.achievements-section {
+  background: white; /* Fundo branco */
+  border-radius: 1rem; /* Bordas arredondadas */
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  margin-top: 2rem; /* Espaçamento superior de 2rem */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Grid de conquistas */
+.achievements-grid {
+  display: grid; /* Layout em grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas adaptáveis */
+  gap: 1rem; /* Espaçamento entre os itens */
+}
+
+/* Cartão de conquista */
+.achievement-card {
+  padding: 1.5rem; /* Espaçamento interno de 1.5rem */
+  border-radius: 0.5rem; /* Bordas levemente arredondadas */
+  background: #f3f4f6; /* Fundo cinza claro */
+  text-align: center; /* Texto centralizado */
+  transition: transform 0.2s; /* Transição suave para transformações */
+}
+
+/* Cartão de conquista desbloqueado */
+.achievement-card.unlocked {
+  background: #f0fdf4; /* Fundo verde claro */
+  border: 1px solid #86efac; /* Borda verde claro */
+}
+
+/* Cartão de conquista bloqueado */
+.achievement-card.locked {
+  opacity: 0.7; /* Opacidade reduzida */
+  filter: grayscale(1); /* Aplica filtro em escala de cinza */
+}
+
+/* Ícone de conquista */
+.achievement-icon {
+  font-size: 2rem; /* Tamanho da fonte do ícone de 2rem */
+  margin-bottom: 0.5rem; /* Espaçamento inferior de 0.5rem */
+}
+
+/* Data de conquista */
+.achievement-date {
+  display: block; /* Exibe como bloco */
+  margin-top: 0.5rem; /* Espaçamento superior de 0.5rem */
+  font-size: 0.875rem; /* Tamanho da fonte de 0.875rem */
+  color: #6b7280; /* Cor do texto cinza escuro */
+}
+
+/* Estilos responsivos para telas pequenas (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Alterações para o layout do perfil */
+  .profile-info {
+      flex-direction: column; /* Coloca os itens em uma coluna */
+      text-align: center; /* Alinha o texto ao centro */
+  }
+  
+  /* Alterações na grid de estatísticas */
+  .stats-grid {
+      grid-template-columns: 1fr; /* Exibe uma coluna em vez de várias */
+  }
+}

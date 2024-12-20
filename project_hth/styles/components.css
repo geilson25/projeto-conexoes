@@ -1,65 +1,142 @@
-/* Estilo do cabeçalho (Header) */
+/* Cabeçalho com gradiente e sombra */
 .header {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);  /* Aplica um gradiente de cor azul para o cabeçalho */
-    padding: 1rem;  /* Adiciona preenchimento interno de 1rem para o cabeçalho */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Aplica uma sombra suave para dar um efeito de profundidade */
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); /* Gradiente azul para o fundo */
+    padding: 1rem; /* Padding de 1 rem */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para o cabeçalho */
 }
 
-/* Estilo do cartão de curso */
+/* Cartão de curso */
 .course-card {
-    border-radius: 8px;  /* Bordas arredondadas no cartão */
-    background: white;  /* Cor de fundo branca para o cartão */
-    transition: transform 0.2s;  /* Efeito de transição para a transformação do cartão */
+    border-radius: 8px; /* Bordas arredondadas */
+    background: white; /* Cor de fundo branca */
+    transition: transform 0.2s; /* Transição suave para transformação */
+    height: 100%; /* Altura total do contêiner pai */
+    display: flex; /* Flexbox para o layout */
+    flex-direction: column; /* Layout de coluna */
 }
 
 /* Efeito de hover no cartão de curso */
 .course-card:hover {
-    transform: translateY(-4px);  /* Ao passar o mouse sobre o cartão, ele se move para cima */
+    transform: translateY(-4px); /* Desloca o cartão para cima quando o mouse passa por cima */
 }
 
-/* Estilo da imagem de capa do curso */
-.course-cover-image img {
-    transition: transform 0.3s ease;  /* Transição suave para o efeito de transformação na imagem */
-}
-
-/* Efeito de hover na imagem de capa do curso */
-.course-card:hover .course-cover-image img {
-    transform: scale(1.05);  /* Ao passar o mouse sobre o cartão, a imagem se expande ligeiramente */
-}
-
-/* Estilo da área da imagem de capa do curso */
+/* Imagem do curso com proporção de 16:9 */
 .course-cover-image {
-    overflow: hidden;  /* Garante que qualquer parte da imagem que ultrapasse os limites seja escondida */
-    border-radius: 0.5rem;  /* Bordas arredondadas na área da imagem */
+    position: relative; /* Necessário para posicionar a imagem */
+    padding-top: 56.25%; /* Proporção 16:9 */
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+    border-radius: 8px 8px 0 0; /* Bordas arredondadas no topo */
 }
 
-/* Estilo do badge de nível */
+/* Estilo da imagem dentro do cartão de curso */
+.course-cover-image img {
+    position: absolute; /* Posiciona a imagem em relação ao contêiner */
+    top: 0;
+    left: 0;
+    width: 100%; /* Preenche a largura do contêiner */
+    height: 100%; /* Preenche a altura do contêiner */
+    object-fit: cover; /* Faz com que a imagem cubra toda a área */
+    transition: transform 0.3s ease; /* Transição suave para zoom */
+}
+
+/* Efeito de zoom na imagem do curso quando o cartão é sobrevoado */
+.course-card:hover .course-cover-image img {
+    transform: scale(1.05); /* Aplica um leve zoom na imagem */
+}
+
+/* Layout de grid para os cursos */
+.courses-grid {
+    display: grid; /* Usa grid para organizar os itens */
+    grid-template-columns: repeat(1, 1fr); /* Uma coluna por padrão */
+    gap: 2rem; /* Espaço entre os itens */
+    padding: 1rem; /* Padding ao redor do grid */
+}
+
+/* Ajusta o layout para telas maiores (a partir de 640px) */
+@media (min-width: 640px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    }
+}
+
+/* Ajusta o layout para telas ainda maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    }
+}
+
+/* Ajuste de espaçamento para telas ainda maiores (a partir de 1280px) */
+@media (min-width: 1280px) {
+    .courses-grid {
+        gap: 2.5rem; /* Aumenta o espaçamento entre os itens */
+    }
+}
+
+/* Estilo para os badges de nível */
 .level-badge {
-    border-radius: 9999px;  /* Torna o badge completamente arredondado */
-    padding: 0.5rem 1rem;  /* Adiciona preenchimento interno ao badge */
-    font-weight: 600;  /* Deixa o texto do badge em negrito */
+    border-radius: 9999px; /* Bordas totalmente arredondadas */
+    padding: 0.5rem 1rem; /* Padding ao redor do badge */
+    font-weight: 600; /* Texto em negrito */
 }
 
-/* Estilo da barra de progresso */
+/* Barra de progresso */
 .progress-bar {
-    height: 8px;  /* Define a altura da barra de progresso */
-    border-radius: 4px;  /* Bordas arredondadas na barra de progresso */
-    background: #e5e7eb;  /* Cor de fundo cinza claro para a barra de progresso */
-    overflow: hidden;  /* Garante que o conteúdo da barra de progresso não ultrapasse seus limites */
+    height: 8px; /* Altura da barra de progresso */
+    border-radius: 4px; /* Bordas arredondadas */
+    background: #e5e7eb; /* Cor de fundo da barra de progresso */
+    overflow: hidden; /* Garante que a parte preenchida da barra não ultrapasse */
 }
 
-/* Estilo do preenchimento da barra de progresso */
+/* Preenchimento da barra de progresso */
 .progress-bar-fill {
-    height: 100%;  /* O preenchimento ocupa toda a altura da barra */
-    transition: width 0.3s ease;  /* Transição suave ao alterar a largura do preenchimento */
+    height: 100%; /* Preenche toda a altura da barra */
+    transition: width 0.3s ease; /* Transição suave no preenchimento */
 }
 
-/* Estilo da imagem de avatar do usuário */
+/* Efeito de hover na imagem do avatar do usuário */
 img[data-name="user-avatar"] {
-    transition: transform 0.2s;  /* Transição suave para a transformação do avatar */
+    transition: transform 0.2s; /* Transição suave para transformação */
 }
 
-/* Efeito de hover no avatar do usuário */
+/* Efeito de zoom no hover da imagem do avatar */
 img[data-name="user-avatar"]:hover {
-    transform: scale(1.1);  /* Ao passar o mouse sobre o avatar, ele se amplia ligeiramente */
+    transform: scale(1.1); /* Aplica um zoom na imagem */
+}
+
+/* Ajustes responsivos no container */
+.container {
+    width: 100%; /* Largura total */
+    margin-right: auto; /* Centraliza o container */
+    margin-left: auto; /* Centraliza o container */
+    padding-right: 1rem; /* Padding à direita */
+    padding-left: 1rem; /* Padding à esquerda */
+}
+
+/* Ajusta o container para telas médias (a partir de 640px) */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px; /* Limita a largura máxima para 640px */
+    }
+}
+
+/* Ajusta o container para telas grandes (a partir de 768px) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px; /* Limita a largura máxima para 768px */
+    }
+}
+
+/* Ajusta o container para telas ainda maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px; /* Limita a largura máxima para 1024px */
+    }
+}
+
+/* Ajusta o container para telas extra grandes (a partir de 1280px) */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px; /* Limita a largura máxima para 1280px */
+    }
 }
