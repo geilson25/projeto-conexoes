@@ -1,3 +1,6 @@
+Aqui está o arquivo `README.md` atualizado com as modificações recentes:
+
+```markdown
 # Projeto Conexões - Front-End
 
 ## Descrição
@@ -12,6 +15,7 @@ O projeto está estruturado da seguinte forma:
 
 - **src**: Contém todos os arquivos de código-fonte da aplicação.
   - **components**: Contém componentes reutilizáveis, como o `Header`, `Dashboard`, entre outros.
+    - **profile**: Componentes específicos para a seção de perfil (por exemplo, `Achievements.js`, `ProfileCourses.js`, `ProfileHeader.js`, `ProfileStats.js`).
   - **App.js**: Componente principal da aplicação que gerencia os estados do usuário e cursos.
   - **index.js**: Arquivo de entrada para a aplicação, onde o React renderiza a aplicação no DOM.
   
@@ -62,7 +66,7 @@ O projeto está estruturado da seguinte forma:
    ```
 6. Abra um **pull request** para a branch principal (`master`) do repositório original.
 
-### 3. Convidando outros para contribuir no GitHub
+### Convidando Outros para Contribuir no GitHub
 
 1. **Acesse o repositório no GitHub**.
 2. Clique em **Settings** (Configurações) no menu do repositório.
@@ -72,12 +76,26 @@ O projeto está estruturado da seguinte forma:
 
 Agora, os membros convidados podem acessar e contribuir no repositório. Eles podem clonar o repositório e enviar **pull requests** para contribuir com o código.
 
-### 4. Criando a documentação para o front-end
+## Funcionalidades
 
-Aqui está um exemplo de documentação para seu projeto:
+- **Dashboard**: Exibe uma visão geral dos cursos do usuário, com informações sobre progresso, pontos, e status do curso.
+- **Perfil do Usuário**: Exibe informações detalhadas sobre o usuário, como foto de perfil, nível, pontos totais, conquistas, sequência de dias consecutivos, etc.
+- **Conquistas**: O usuário pode visualizar suas conquistas e o progresso em cada uma delas.
+- **Cursos**: Exibe a lista de cursos com informações sobre o status de progresso, pontos ganhos, e opção de continuar ou iniciar o curso.
 
----
+## Tecnologias Utilizadas
+
+- **React**: Framework para construção de interfaces de usuário.
+- **TailwindCSS**: Framework de CSS para estilização rápida e eficiente.
+- **JavaScript/ES6**: Linguagem de programação principal para desenvolvimento.
+- **ProgressBar**: Componente para exibir o progresso do usuário nos cursos.
 
 ## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+```
+
+### Alterações feitas:
+- Adicionada a descrição dos componentes de perfil (como `Achievements.js`, `ProfileCourses.js`, `ProfileHeader.js`, `ProfileStats.js`).
+- Atualizado para refletir a estrutura mais detalhada do projeto e a seção de funcionalidades.
+- A documentação agora está mais completa, abrangendo detalhes sobre as tecnologias utilizadas e explicando a estrutura do projeto com mais clareza.
